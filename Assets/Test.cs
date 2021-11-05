@@ -22,10 +22,16 @@ public class Boss
     public void majic()
     {
         if (mp >= 5)
-        {   mp = mp - 5; }
-        Debug.Log("魔法攻撃をした。残りmpは" + mp);
-        if (mp < 5)
-        Debug.Log("mpが足りないため、魔法攻撃が使えない。");
+        { mp = mp - 5;
+
+        
+            Debug.Log("魔法攻撃をした。残りmpは" + mp);
+        }
+        else
+        {
+            Debug.Log("mpが足りないため、魔法攻撃が使えない。");
+        }
+           
     }
 }
 
@@ -61,7 +67,7 @@ public class Test : MonoBehaviour
         lastboss.Attack();
         // 防御用の関数を呼び出す
         lastboss.Defence(3);
-        for (int i = 0; i < 12; i++) 
+        for (int i = 0; i < 11; i++) 
         { lastboss.majic(); }
 
         
